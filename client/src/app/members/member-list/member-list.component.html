@@ -2,23 +2,23 @@
     <h2>Your matches - {{pagination?.totalItems}} found</h2>
 </div>
 
-<div class="container mt-3">
-    <form #form="ngForm" class="form-inline mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
-        <div class="form-group">
+<div class="container mt-3" >
+    <form  #form="ngForm" class="form-inline mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
+        <div class="form-group px-2">
             <label>Age from: </label>
-            <input type="number" class="form-control ml-1" style="width: 70px;" name="minAge" 
+            <input type="number" class="form-control ml-1" style="text-align: center;" name="minAge" 
                 [(ngModel)]="userParams.minAge">
         </div>
 
         <div class="form-group px-2">
             <label>Age to: </label>
-            <input type="number" class="form-control ml-1" style="width: 70px;" name="maxAge" 
+            <input type="number" class="form-control ml-1" style="text-align: center;" name="maxAge" 
                 [(ngModel)]="userParams.maxAge">
         </div>
 
         <div class="form-group px-2">
             <label>Show: </label>
-            <select name="gender" style="width: 130px" [(ngModel)]="userParams.gender" class="form-control ml-1">
+            <select name="gender" style="text-align:center" [(ngModel)]="userParams.gender" class="form-control ml-1"> 
                 <option *ngFor="let gender of genderList" [value]="gender.value">
                     {{gender.display}}
                 </option>
